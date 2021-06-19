@@ -7,7 +7,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 fun main() {
-  val driver = JdbcSqliteDriver("jdbc:sqlite:leakdb.sqlite")
+  val driver = JdbcSqliteDriver("jdbc:sqlite:leakdb.sqlite") // File is checked into Git
   val db = TestDb(driver)
 
   // Code used to populate the db:
