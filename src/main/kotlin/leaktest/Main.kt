@@ -19,8 +19,6 @@ fun main() {
   val pid = ProcessHandle.current().pid()
   println("I am process $pid")
 
-  getResidentMemory(pid)
-
   runBlocking {
     launch {
       while (isActive) {
