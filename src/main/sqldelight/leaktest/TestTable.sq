@@ -1,0 +1,17 @@
+
+
+CREATE TABLE TestTable (
+    uuid TEXT NOT NULL PRIMARY KEY,
+    some_text TEXT NOT NULL,
+    some_timestamp INTEGER NOT NULL
+);
+
+getLatest:
+SELECT uuid, some_text, some_timestamp
+FROM TestTable
+ORDER BY some_timestamp DESC
+LIMIT 1;
+
+insertOne:
+INSERT INTO TestTable (uuid, some_text, some_timestamp)
+VALUES (?, ?, ?);
